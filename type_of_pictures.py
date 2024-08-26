@@ -1,27 +1,41 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
 import os
-from PIL import Image
-import pyheif
 
 
-def find_all_heic_pictures(needed_path):
-    """Find all heic pictures in the path. The path is set to the main folder directory, it can be changed manually"""
-    heic_pictures = []
-    for file in os.listdir(needed_path):
-        if file.lower().endswith('.heic'):
-            heic_pictures.append(f'{needed_path}\{file}')
-
-            new_file_path = os.path.join(needed_path, file.lower().replace('.heic', '.JPEG'))
-
-            width, height = 100, 100
-            mode = 'RGB'
-            data = np.random.randint(0, 256, (height, width, 3), dtype=np.uint8)
-
-            data_bytes = data.tobytes()
-            Image.frombytes(mode, (width, height), data_bytes).save(new_file_path, format='JPEG')
-
-    return heic_pictures
+driver = webdriver.Chrome()
 
 
-path = os.getcwd()
-all_heic_pictures = find_all_heic_pictures(path)
-print(all_heic_pictures[0])
+try:
+    driver.get("https://heic.online/")
+
+    # wait = WebDriverWait(driver, 50)
+    # upload_element = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="zbasic"]/button')))
+    time.sleep(20)
+except:
+    print('Не става')
+
+
+
+# def find_all_heic_pictures(needed_path):
+#     """Find all heic pictures in the path. The path is set to the main folder directory, it can be changed manually"""
+#     heic_pictures = []
+#     for file in os.listdir(needed_path):
+#         if file.lower().endswith('.heic'):
+#             heic_pictures.append(f'{needed_path}\{file}')
+#             heic_file = f'{needed_path}\{file}'
+#             jpeg_file = f'image.JPEG'
+#
+#             command = f"magick convert {heic_file} {jpeg_file}"
+#
+#     return heic_pictures
+#
+#
+# path = os.getcwd()
+# all_heic_pictures = find_all_heic_pictures(path)
+# print(all_heic_pictures[0])
