@@ -1,14 +1,15 @@
 from selenium import webdriver
+from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
 
 
-driver = webdriver.Chrome()
+edge_driver_path = 'D:/edge_driver/msedgedriver.exe'
+service = EdgeService(executable_path=edge_driver_path)
+driver = webdriver.Edge(service=service)
 
 
 try:
