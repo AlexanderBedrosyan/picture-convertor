@@ -29,6 +29,12 @@ def used_web_for_changing_the_format(all_heic_pictures=List):
 
             file_input.send_keys(pic_path)
 
+        time.sleep(5)
+
+        #Needs to click I consent, before to execute the convert button
+        
+        convert_button = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[1]/div/div/main/article/div/p[1]/button')))
+        convert_button.click()
 
         time.sleep(15)
     except:
