@@ -17,13 +17,23 @@ def used_web_for_changing_the_format(all_heic_pictures=List):
     try:
         driver.get("https://heic.online/")
         wait = WebDriverWait(driver, 10)
+
         consent_button = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[1]')))
         consent_button.click()
-        upload_element = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="zbasic"]/button')))
-        time.sleep(60)
+
+        time.sleep(2)
+
+        file_input = wait.until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div[1]/div/div/main/article/div/div[1]/div/div/div/form/input[2]')))
+
+        file_path = all_heic_pictures[0]
+
+        file_input.send_keys(file_path)
+
+
+        time.sleep(15)
     except:
         print('Not working! Please check the XPATH or edge driver path! Be aware that you have install the webdriver before starting the script!')
 
 
 heic_picture_list = find_all_heic_pictures()
-used_web_for_changing_the_format()
+used_web_for_changing_the_format(heic_picture_list)
