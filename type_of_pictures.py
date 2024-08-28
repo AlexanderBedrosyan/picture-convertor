@@ -25,9 +25,9 @@ def used_web_for_changing_the_format(all_heic_pictures=List):
 
         file_input = wait.until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div[1]/div/div/main/article/div/div[1]/div/div/div/form/input[2]')))
 
-        file_path = all_heic_pictures[0]
+        for pic_path in heic_picture_list:
 
-        file_input.send_keys(file_path)
+            file_input.send_keys(pic_path)
 
 
         time.sleep(15)
