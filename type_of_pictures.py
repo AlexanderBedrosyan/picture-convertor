@@ -31,10 +31,16 @@ def used_web_for_changing_the_format(all_heic_pictures=List):
 
         time.sleep(5)
 
-        #Needs to click I consent, before to execute the convert button
-        
+        check_box_consent = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[1]/div/div/main/article/div/div[4]/input')))
+        check_box_consent.click()
+
+        time.sleep(2)
         convert_button = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[1]/div/div/main/article/div/p[1]/button')))
         convert_button.click()
+
+        time.sleep(2)
+        download_button = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[1]/div/div/main/article/div/div[2]/div/button[1]')))
+        download_button.click()
 
         time.sleep(15)
     except:
