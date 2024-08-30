@@ -49,7 +49,3 @@ class PictureConvertor:
         except:
             print('Not working! Please check the XPATH or edge driver path! Be aware that you have install the webdriver before starting the script!')
 
-
-heic_picture_list = find_all_heic_pictures()
-pictures_convertor = PictureConvertor(heic_picture_list)
-pictures_convertor.used_web_for_changing_the_format()
