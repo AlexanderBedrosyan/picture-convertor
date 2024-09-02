@@ -2,7 +2,7 @@
 ____________________________________________
 Welcome to the HEIC to JPEG Converter! This application is designed to seamlessly convert images from the HEIC format to JPEG, making them accessible on a wider range of devices and platforms.
 
-## Features:
+## Features
 ____________________________________________
 - Batch Conversion: Convert multiple HEIC images to JPEG format at once.
 - User-Friendly Interface: Simple and intuitive GUI for easy navigation.
@@ -17,6 +17,7 @@ Follow these steps to install and run the application:
 - pip install -r requirements.txt (in terminal when the application is cloned)
 - Run application.py
 ____________________________________________
-
+## Main app view
+![image](https://github.com/user-attachments/assets/c61f0c35-6d25-4a67-87e0-459dc77fc024)
 
 
