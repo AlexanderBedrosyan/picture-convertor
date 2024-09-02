@@ -14,3 +14,9 @@ Follow these steps to install and run the application:
 
 - Python: Ensure you have Python installed (version 3.6 or higher).
 - Pip: Python's package installer should be installed.
+- pip install -r requirements.txt (in terminal when the application is cloned)
+- Run application.py
+____________________________________________
+
+
+
