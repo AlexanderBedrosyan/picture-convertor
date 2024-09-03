@@ -22,6 +22,10 @@ ____________________________________________
 ____________________________________________
 ## Upload needed files
 ![image](https://github.com/user-attachments/assets/b3efc6ac-34a0-49ba-9e28-0d79e8c36dba)
+____________________________________________
 ## Press Convert Button
 The application open web page https://heic.online/ by selenium library and try to convert all of them
+![image](https://github.com/user-attachments/assets/55c986a8-4cfe-499d-9d39-43a1096f898f)
+____________________________________________
+
 
