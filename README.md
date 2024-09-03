@@ -19,5 +19,8 @@ Follow these steps to install and run the application:
 ____________________________________________
 ## Main app view
 ![image](https://github.com/user-attachments/assets/c61f0c35-6d25-4a67-87e0-459dc77fc024)
+____________________________________________
+## Upload needed files
+![image](https://github.com/user-attachments/assets/b3efc6ac-34a0-49ba-9e28-0d79e8c36dba)
 
 
