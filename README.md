@@ -28,4 +28,5 @@ The application open web page https://heic.online/ by selenium library and try t
 ![image](https://github.com/user-attachments/assets/55c986a8-4cfe-499d-9d39-43a1096f898f)
 ____________________________________________
 
+The application automatically open heic.online, upload the pictures, convert them and download them on the exact place that it's your path for download documents (usually Downloads folder)
 
